@@ -62,81 +62,82 @@
 - `git remote rename origin origin2` renomeia o repositório remoto
 
 ## git branch
-- comando para criar um ramo
-- `git branch` mostra os ramos
-- `git branch -a` mostra os ramos locais e remotos
-- `git branch nome_do_ramo` cria um ramo
-- `git branch -d nome_do_ramo` deleta o ramo
-- `git branch -D nome_do_ramo` deleta o ramo forçadamente
-- `git branch -m nome_do_ramo` renomeia o ramo
-- `git branch -M nome_do_ramo` renomeia o ramo forçadamente mesmo se o ramo tiver alterações não commitadas agora o branch será renomeado para nome_do_ramo
+- comando para criar um branch
+- `git branch` mostra os branch
+- `git branch -a` mostra os branch locais e remotos
+- `git branch nome_do_branch` cria um branch
+- `git branch -d nome_do_branch` deleta o branch
+- `git branch -D nome_do_branch` deleta o branch forçadamente
+- `git branch -m nome_do_branch` renomeia o branch
+- `git branch -M nome_do_branch` renomeia o branch forçadamente mesmo se o branch tiver alterações não commitadas agora o branch será renomeado para nome_do_branch
 
 ## git push
 - comando para enviar as alterações para o repositório remoto
 - `git push -u origin main` envia as alterações para o repositório remoto
 - `git push -u origin master` envia as alterações para o repositório remoto
 - `git push -f origin main` envia as alterações forçadamente para o repositório remoto
-- -u faz com que o git lembre que o ramo master é o ramo remoto
+- -u faz com que o git lembre que o branch master é o branch remoto
 - `git push origin master` envia as alterações para o repositório remoto
 - `git push origin nome_do_ramo` envia as alterações para o repositório remoto
 - `git push origin :nome_do_ramo` deleta o ramo remoto
 - `git push origin --delete nome_do_ramo` deleta o ramo remoto
 
 ## git checkout
-- comando para trocar de ramo
-- `git checkout nome_do_ramo` troca para o ramo especificado
-- `git checkout -b nome_do_ramo` cria e troca para o ramo especificado
-
-## git merge
-- comando para mesclar os ramos
-- `git merge nome_do_ramo` mescla o ramo especificado com o ramo atual
-- `git merge nome_do_ramo --no-ff` mescla o ramo especificado com o ramo atual sem fazer o fast forward
-- `git merge nome_do_ramo --no-ff -m "mensagem"` mescla o ramo especificado com o ramo atual sem fazer o fast forward com a mensagem especificada
-- `git merge nome_do_ramo --no-ff --no-edit` mescla o ramo especificado com o ramo atual sem fazer o fast forward sem abrir o editor de texto
-- `git merge nome_do_ramo --no-ff --no-edit -m "mensagem"` mescla o ramo especificado com o ramo atual sem fazer o fast forward sem abrir o editor de texto com a mensagem especificada
-
-
+- comando para trocar de branch, branch é uma linha do tempo
+- `git checkout nome_do_branch` troca para o branch especificado
+- `git checkout -b "nome_do_branch"` cria e troca para o branch especificado nome do branch não pode ter espaço
+- por convenção o nome do branch deve ser o nome da feature que está sendo desenvolvida ex: feature/login ex: feature/cadastro ex: feature/alterar-senha
+- convenção para nome de branch: 720-submodules-rc       722-add-billing-module  723-fix-highlighting    728-fix-homepage-css
+- exemplo usando convenção:
+- `git checkout -b "taskID-fix-home-page-css"` cria e troca para o branch especificado
+- `git checkout -b "taskID-fix-button-in-sigin"` cria e troca para o branch especificado
 
 ## git pull
 - comando para receber as alterações do repositório remoto
 - `git pull origin master` recebe as alterações do repositório remoto
-- `git pull origin nome_do_ramo` recebe as alterações do repositório remoto
-- `git pull origin :nome_do_ramo` deleta o ramo remoto
-- `git pull origin --delete nome_do_ramo` deleta o ramo remoto
+- `git pull origin nome_do_branch` recebe as alterações do repositório remoto
+- `git pull origin :nome_do_branch` deleta o branch remoto
+- `git pull origin --delete nome_do_branch` deleta o branch remoto
 - `git pull origin master --allow-unrelated-histories` recebe as alterações do repositório remoto
 -  --allow-unrelated-histories permite que o git receba alterações de repositórios diferentes
 - `git pull origin master --allow-unrelated-histories --allow-unrelated-histories` recebe as alterações do repositório remoto
 
+## git merge
+- comando para mesclar as alterações de um branch para outro branch
+- `git merge nome_do_branch` mescla as alterações do branch especificado para o branch atual
+- `git merge nome_do_branch --no-ff` mescla as alterações do branch especificado para o branch atual sem fazer o fast forward
+- `git merge nome_do_branch --no-ff -m "mensagem"` mescla as alterações do branch especificado para o branch atual sem fazer o fast forward e adiciona a mensagem
+- `git merge nome_do_branch --no-ff -m "mensagem" --no-edit` mescla as alterações do branch especificado para o branch atual sem fazer o fast forward e adiciona a mensagem e não abre o editor de texto
+- `git merge nome_do_branch --no-ff -m "mensagem" --no-edit --no-verify` mescla as alterações do branch especificado para o branch atual sem fazer o fast forward e adiciona a mensagem e não abre o editor de texto e não verifica as regras de commit
+- `git merge nome_do_branch --no-ff -m "mensagem" --no-edit --no-verify --no-commit` mescla as alterações do branch especificado para o branch atual sem fazer o fast forward e adiciona a mensagem e não abre o editor de texto e não verifica as regras de commit e não faz o commit
 
-
-
-
-
-
-
-
-
-
+## git stash
+- comando para guardar as alterações
+- `git stash` guarda as alterações
+- `git stash list` mostra as alterações guardadas
+- `git stash apply` aplica as alterações guardadas
+- `git stash drop` remove as alterações guardadas
+- `git stash clear` remove todas as alterações guardadas
 
 ## git log
 - comando para ver o histórico de commits
 - `git log` mostra o histórico de commits
 - `git log --oneline` mostra o histórico de commits de forma resumida
-- `git log --oneline --decorate` mostra o histórico de commits de forma resumida e mostra os ramos
-- `git log --oneline --decorate --graph` mostra o histórico de commits de forma resumida, mostra os ramos e mostra o gráfico
-- `git log --oneline --decorate --graph --all` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico e mostra todos os ramos
+- `git log --oneline --decorate` mostra o histórico de commits de forma resumida e mostra os branch
+- `git log --oneline --decorate --graph` mostra o histórico de commits de forma resumida, mostra os branch e mostra o gráfico
+- `git log --oneline --decorate --graph --all` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico e mostra todos os branch
 
-- `git log --oneline --decorate --graph --all --author="nome"` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos e mostra os commits do autor especificado
+- `git log --oneline --decorate --graph --all --author="nome"` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch e mostra os commits do autor especificado
 
-- `git log --oneline --decorate --graph --all --author="nome" --since="data"` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado e mostra os commits feitos a partir da data especificada
+- `git log --oneline --decorate --graph --all --author="nome" --since="data"` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado e mostra os commits feitos a partir da data especificada
 
-- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data"` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada e mostra os commits feitos até a data especificada
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data"` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada e mostra os commits feitos até a data especificada
 
-- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra"` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada e mostra os commits que contém a palavra especificada
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra"` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada e mostra os commits que contém a palavra especificada
 
-- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra"` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada e mostra os commits que contém a palavra especificada
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra"` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada e mostra os commits que contém a palavra especificada
 
-- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra" --stat` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada, mostra os commits que contém a palavra especificada e mostra as estatísticas dos commits
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra" --stat` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada, mostra os commits que contém a palavra especificada e mostra as estatísticas dos commits
 
-- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra" --stat --patch` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada, mostra os commits que contém a palavra especificada, mostra as estatísticas dos commits e mostra as alterações dos commits
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra" --stat --patch` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada, mostra os commits que contém a palavra especificada, mostra as estatísticas dos commits e mostra as alterações dos commits
 
