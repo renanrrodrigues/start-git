@@ -174,4 +174,5 @@ node_modules/
 
 ### Ignore arquivos de configuração de SASS
 .sass-cache
+.sass-cache/
 
