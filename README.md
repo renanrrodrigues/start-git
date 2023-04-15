@@ -82,6 +82,20 @@
 - `git push origin :nome_do_ramo` deleta o ramo remoto
 - `git push origin --delete nome_do_ramo` deleta o ramo remoto
 
+## git checkout
+- comando para trocar de ramo
+- `git checkout nome_do_ramo` troca para o ramo especificado
+- `git checkout -b nome_do_ramo` cria e troca para o ramo especificado
+
+## git merge
+- comando para mesclar os ramos
+- `git merge nome_do_ramo` mescla o ramo especificado com o ramo atual
+- `git merge nome_do_ramo --no-ff` mescla o ramo especificado com o ramo atual sem fazer o fast forward
+- `git merge nome_do_ramo --no-ff -m "mensagem"` mescla o ramo especificado com o ramo atual sem fazer o fast forward com a mensagem especificada
+- `git merge nome_do_ramo --no-ff --no-edit` mescla o ramo especificado com o ramo atual sem fazer o fast forward sem abrir o editor de texto
+- `git merge nome_do_ramo --no-ff --no-edit -m "mensagem"` mescla o ramo especificado com o ramo atual sem fazer o fast forward sem abrir o editor de texto com a mensagem especificada
+
+
 
 ## git pull
 - comando para receber as alterações do repositório remoto
