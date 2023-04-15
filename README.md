@@ -91,6 +91,7 @@
 - exemplo usando convenção:
 - `git checkout -b "taskID-fix-home-page-css"` cria e troca para o branch especificado
 - `git checkout -b "taskID-fix-button-in-sigin"` cria e troca para o branch especificado
+- `git checkout .\index.html` volta o arquivo para o estado que estava no último commit
 
 ## git pull
 - comando para receber as alterações do repositório remoto
@@ -108,18 +109,7 @@
 - `git merge nome_do_branch --no-ff` mescla as alterações do branch especificado para o branch atual sem fazer o fast forward
 - `git merge nome_do_branch --no-ff -m "mensagem"` mescla as alterações do branch especificado para o branch atual sem fazer o fast forward e adiciona a mensagem
 - `git merge nome_do_branch --no-ff -m "mensagem" --no-edit` mescla as alterações do branch especificado para o branch atual sem fazer o fast forward e adiciona a mensagem e não abre o editor de texto
-- `git merge nome_do_branch --no-ff -m "mensagem" --no-edit --no-verify` mescla as alterações do branch especificado para o branch atual sem fazer o fast forward e adiciona a mensagem e não abre o editor de texto e não verifica as regras de commit
-- `git merge nome_do_branch --no-ff -m "mensagem" --no-edit --no-verify --no-commit` mescla as alterações do branch especificado para o branch atual sem fazer o fast forward e adiciona a mensagem e não abre o editor de texto e não verifica as regras de commit e não faz o commit
-
-## git stash
-- comando para guardar as alterações
-- `git stash` guarda as alterações
-- `git stash list` mostra as alterações guardadas
-- `git stash apply` aplica as alterações guardadas
-- `git stash drop` remove as alterações guardadas
-- `git stash clear` remove todas as alterações guardadas
-
-## git log
+- `git merge nome_do_branch --no-ff -m "mensagem" --no-edit --no-verify` mescla as altera## git log
 - comando para ver o histórico de commits
 - `git log` mostra o histórico de commits
 - `git log --oneline` mostra o histórico de commits de forma resumida
@@ -140,6 +130,24 @@
 - `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra" --stat` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada, mostra os commits que contém a palavra especificada e mostra as estatísticas dos commits
 
 - `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra" --stat --patch` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada, mostra os commits que contém a palavra especificada, mostra as estatísticas dos commits e mostra as alterações dos commits
+ções do branch especificado para o branch atual sem fazer o fast forward e adiciona a mensagem e não abre o editor de texto e não verifica as regras de commit
+- `git merge nome_do_branch --no-ff -m "mensagem" --no-edit --no-verify --no-commit` mescla as alterações do branch especificado para o branch atual sem fazer o fast forward e adiciona a mensagem e não abre o editor de texto e não verifica as regras de commit e não faz o commit
+
+## git clean
+- comando para limpar o repositório
+- `git clean -n` mostra os arquivos que serão excluídos
+- `git clean -f` exclui os arquivos
+- `git clean -f -d` exclui os arquivos e as pastas
+- `git clean -f -d -x` exclui os arquivos, as pastas e os arquivos ignorados
+
+
+## git stash
+- comando para guardar as alterações
+- `git stash` guarda as alterações
+- `git stash list` mostra as alterações guardadas
+- `git stash apply` aplica as alterações guardadas
+- `git stash drop` remove as alterações guardadas
+- `git stash clear` remove todas as alterações guardadas
 
 ## git ignore
 - arquivo para ignorar arquivos e pastas
@@ -175,4 +183,27 @@ node_modules/
 ### Ignore arquivos de configuração de SASS
 .sass-cache
 .sass-cache/
+
+
+## git log
+- comando para ver o histórico de commits
+- `git log` mostra o histórico de commits
+- `git log --oneline` mostra o histórico de commits de forma resumida
+- `git log --oneline --decorate` mostra o histórico de commits de forma resumida e mostra os branch
+- `git log --oneline --decorate --graph` mostra o histórico de commits de forma resumida, mostra os branch e mostra o gráfico
+- `git log --oneline --decorate --graph --all` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico e mostra todos os branch
+
+- `git log --oneline --decorate --graph --all --author="nome"` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch e mostra os commits do autor especificado
+
+- `git log --oneline --decorate --graph --all --author="nome" --since="data"` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado e mostra os commits feitos a partir da data especificada
+
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data"` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada e mostra os commits feitos até a data especificada
+
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra"` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada e mostra os commits que contém a palavra especificada
+
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra"` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada e mostra os commits que contém a palavra especificada
+
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra" --stat` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada, mostra os commits que contém a palavra especificada e mostra as estatísticas dos commits
+
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra" --stat --patch` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada, mostra os commits que contém a palavra especificada, mostra as estatísticas dos commits e mostra as alterações dos commits
 
