@@ -155,18 +155,23 @@
 
 Aqui temos um exemplo de como pareceria um arquivo .gitignore:
 
-# Ignore os arquivos de sistema do Mac
-.DS_store
+### Ignore os arquivos de sistema do Mac
+.DS_store/
+.config/
+.test/
 
-# Ignore a pasta node_modules
-node_modules
+### Ignore a pasta node_modules
+node_modules/
 
-# Ignore todos os arquivos de texto
+### Ignore todos os arquivos de texto
 *.txt
+*.md
+*.config
+*.log
 
-# Ignore arquivos relacionados às chaves de API
+### Ignore arquivos relacionados às chaves de API
 .env
 
-# Ignore arquivos de configuração de SASS
+### Ignore arquivos de configuração de SASS
 .sass-cache
 
