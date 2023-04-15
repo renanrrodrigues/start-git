@@ -1,1 +1,1 @@
-let test = 'testando....'
+let test = 'testando....' // variável global
