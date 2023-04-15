@@ -141,3 +141,32 @@
 
 - `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra" --stat --patch` mostra o histórico de commits de forma resumida, mostra os branch, mostra o gráfico, mostra todos os branch, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada, mostra os commits que contém a palavra especificada, mostra as estatísticas dos commits e mostra as alterações dos commits
 
+## git ignore
+- arquivo para ignorar arquivos e pastas
+- `.gitignore` arquivo para ignorar arquivos e pastas
+- `*.log` ignora todos os arquivos com a extensão .log
+- `*.config` ignora todos os arquivos com o nome config
+- ignorar a pastas e subpastas 
+- `node_modules/` ignora a pasta node_modules
+
+'* é usado para corresponder a um caractere curinga'
+'/ é usado para ignorar nomes de caminhos relativos ao arquivo .gitignore'
+'# é usado para adicionar comentários ao arquivo .gitignore'
+
+Aqui temos um exemplo de como pareceria um arquivo .gitignore:
+
+# Ignore os arquivos de sistema do Mac
+.DS_store
+
+# Ignore a pasta node_modules
+node_modules
+
+# Ignore todos os arquivos de texto
+*.txt
+
+# Ignore arquivos relacionados às chaves de API
+.env
+
+# Ignore arquivos de configuração de SASS
+.sass-cache
+
