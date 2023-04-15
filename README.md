@@ -54,12 +54,25 @@
 - -m adiciona a mensagem
 
 
-## git config
-- comando para configurar o git
+## git log
+- comando para ver o histórico de commits
+- `git log` mostra o histórico de commits
+- `git log --oneline` mostra o histórico de commits de forma resumida
+- `git log --oneline --decorate` mostra o histórico de commits de forma resumida e mostra os ramos
+- `git log --oneline --decorate --graph` mostra o histórico de commits de forma resumida, mostra os ramos e mostra o gráfico
+- `git log --oneline --decorate --graph --all` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico e mostra todos os ramos
 
+- `git log --oneline --decorate --graph --all --author="nome"` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos e mostra os commits do autor especificado
 
+- `git log --oneline --decorate --graph --all --author="nome" --since="data"` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado e mostra os commits feitos a partir da data especificada
 
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data"` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada e mostra os commits feitos até a data especificada
 
-## git status
-- comando para verificar o status do git
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra"` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada e mostra os commits que contém a palavra especificada
+
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra"` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada e mostra os commits que contém a palavra especificada
+
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra" --stat` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada, mostra os commits que contém a palavra especificada e mostra as estatísticas dos commits
+
+- `git log --oneline --decorate --graph --all --author="nome" --since="data" --until="data" --grep="palavra" -S"palavra" --stat --patch` mostra o histórico de commits de forma resumida, mostra os ramos, mostra o gráfico, mostra todos os ramos, mostra os commits do autor especificado, mostra os commits feitos a partir da data especificada, mostra os commits feitos até a data especificada, mostra os commits que contém a palavra especificada, mostra os commits que contém a palavra especificada, mostra as estatísticas dos commits e mostra as alterações dos commits
 
