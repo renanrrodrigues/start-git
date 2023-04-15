@@ -41,7 +41,7 @@
 - `git add *.txt` adiciona todos os arquivos com a extensão .txt
 - `git add *.txt *.js` adiciona todos os arquivos com a extensão .txt e .js
 - `git add *.txt *.js *.css` adiciona todos os arquivos com a extensão .txt, .js e .css
-- `git add *.txt *.js *.css *.html` adiciona todos os arquivos com a extensão .txt, .js, .css e .html
+- `git add *.txt *.js *.css *.html` adiciona todos os arquivos com a extensão .txt, .js, .css e .html2
 - `git add *.txt *.js *.css *.html *.php` adiciona todos os arquivos com a extensão .txt, .js, .css, .html e .php
 - `git add *.txt *.js *.css *.html *.php *.py` adiciona todos os arquivos com a extensão .txt, .js, .css, .html, .php e .py
 
@@ -63,8 +63,9 @@
 
 ## git branch
 - comando para criar um ramo
-- `git branch nome_do_ramo` cria um ramo
 - `git branch` mostra os ramos
+- `git branch -a` mostra os ramos locais e remotos
+- `git branch nome_do_ramo` cria um ramo
 - `git branch -d nome_do_ramo` deleta o ramo
 - `git branch -D nome_do_ramo` deleta o ramo forçadamente
 - `git branch -m nome_do_ramo` renomeia o ramo
@@ -72,7 +73,9 @@
 
 ## git push
 - comando para enviar as alterações para o repositório remoto
+- `git push -u origin main` envia as alterações para o repositório remoto
 - `git push -u origin master` envia as alterações para o repositório remoto
+- `git push -f origin main` envia as alterações forçadamente para o repositório remoto
 - -u faz com que o git lembre que o ramo master é o ramo remoto
 - `git push origin master` envia as alterações para o repositório remoto
 - `git push origin nome_do_ramo` envia as alterações para o repositório remoto
