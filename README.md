@@ -53,6 +53,53 @@
 - -a adiciona todos os arquivos que foram alterados
 - -m adiciona a mensagem
 
+## git remote
+- comando para adicionar o repositório remoto
+- `git remote add origin https://github.com/renanrrodrigues/start-git.git` adiciona o repositório remoto
+- `git remote -v` mostra os repositórios remotos
+- `git remote rm origin` remove o repositório remoto
+- `git remote set-url origin https://github.com/renanrrodrigues/start-git.git` altera o repositório remoto
+- `git remote rename origin origin2` renomeia o repositório remoto
+
+## git branch
+- comando para criar um ramo
+- `git branch nome_do_ramo` cria um ramo
+- `git branch` mostra os ramos
+- `git branch -d nome_do_ramo` deleta o ramo
+- `git branch -D nome_do_ramo` deleta o ramo forçadamente
+- `git branch -m nome_do_ramo` renomeia o ramo
+- `git branch -M nome_do_ramo` renomeia o ramo forçadamente mesmo se o ramo tiver alterações não commitadas agora o branch será renomeado para nome_do_ramo
+
+## git push
+- comando para enviar as alterações para o repositório remoto
+- `git push -u origin master` envia as alterações para o repositório remoto
+- -u faz com que o git lembre que o ramo master é o ramo remoto
+- `git push origin master` envia as alterações para o repositório remoto
+- `git push origin nome_do_ramo` envia as alterações para o repositório remoto
+- `git push origin :nome_do_ramo` deleta o ramo remoto
+- `git push origin --delete nome_do_ramo` deleta o ramo remoto
+
+
+## git pull
+- comando para receber as alterações do repositório remoto
+- `git pull origin master` recebe as alterações do repositório remoto
+- `git pull origin nome_do_ramo` recebe as alterações do repositório remoto
+- `git pull origin :nome_do_ramo` deleta o ramo remoto
+- `git pull origin --delete nome_do_ramo` deleta o ramo remoto
+- `git pull origin master --allow-unrelated-histories` recebe as alterações do repositório remoto
+-  --allow-unrelated-histories permite que o git receba alterações de repositórios diferentes
+- `git pull origin master --allow-unrelated-histories --allow-unrelated-histories` recebe as alterações do repositório remoto
+
+
+
+
+
+
+
+
+
+
+
 
 ## git log
 - comando para ver o histórico de commits
