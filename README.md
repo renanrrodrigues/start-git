@@ -27,6 +27,7 @@
 ## git add
 - comando para adicionar arquivos ao git 
 - `git add .` adiciona todos os arquivos
+- `git add --all` adiciona todos os arquivos
 - `git add -A` adiciona todos os arquivos
 - `git add -u` adiciona todos os arquivos que foram alterados
 - `git add -p` adiciona os arquivos de forma interativa
@@ -44,6 +45,7 @@
 - `git add *.txt *.js *.css *.html` adiciona todos os arquivos com a extensão .txt, .js, .css e .html2
 - `git add *.txt *.js *.css *.html *.php` adiciona todos os arquivos com a extensão .txt, .js, .css, .html e .php
 - `git add *.txt *.js *.css *.html *.php *.py` adiciona todos os arquivos com a extensão .txt, .js, .css, .html, .php e .py
+
 
 ## git commit
 - comando para salvar as alterações no git 
@@ -148,6 +150,13 @@
 - `git stash apply` aplica as alterações guardadas
 - `git stash drop` remove as alterações guardadas
 - `git stash clear` remove todas as alterações guardadas
+
+## geit rm
+- comando para remover arquivos
+- `git rm nome_do_arquivo` remove o arquivo
+- `git rm -r --cached myFolder` remove a pasta e os arquivos do repositório, e nao do disco!
+- `git rm nome_do_arquivo -f` remove o arquivo forçadamente
+- `git rm nome_do_arquivo -f --cached` remove o arquivo forçadamente e remove o arquivo do stage 
 
 ## git ignore
 - arquivo para ignorar arquivos e pastas
