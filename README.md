@@ -151,8 +151,9 @@
 - `git stash drop` remove as alterações guardadas
 - `git stash clear` remove todas as alterações guardadas
 
-## geit rm
-- comando para remover arquivos
+## git rm 
+- comando para remover arquivos do git 
+- `git rm -rf build` remove a pasta build e os arquivos do repositório, e nao do disco!
 - `git rm nome_do_arquivo` remove o arquivo
 - `git rm -r --cached myFolder` remove a pasta e os arquivos do repositório, e nao do disco!
 - `git rm nome_do_arquivo -f` remove o arquivo forçadamente
@@ -176,9 +177,12 @@ Aqui temos um exemplo de como pareceria um arquivo .gitignore:
 .DS_store/
 .config/
 .test/
+pasta1/
+pasta2/
 
 ### Ignore a pasta node_modules
 node_modules/
+
 
 ### Ignore todos os arquivos de texto
 *.txt
