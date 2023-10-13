@@ -1,7 +1,7 @@
 # estudando git e github 
 
 ## git --version
-- comando para verificar a versão do git
+- comando para verificar a versão do git  
 
 
 ## git init 
